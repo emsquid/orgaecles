@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "944198055098",
+    "project_id": "orgaecles",
+    "storage_bucket": "orgaecles.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944198055098:android:70ad147182f738cf8c7e83",
+        "android_client_info": {
+          "package_name": "fr.em.orgaecls"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "944198055098-ptu2pshjjhv7hqb2heo2pp2cjoholu5o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBPkLg1W1nW47RMljvvlt05SYxbn6o4HY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "944198055098-ptu2pshjjhv7hqb2heo2pp2cjoholu5o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

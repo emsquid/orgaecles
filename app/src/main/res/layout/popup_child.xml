@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="350dp"
+    android:layout_height="500dp"
+    android:background="@drawable/rounded_corner"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/popup_child_title"
+            style="@style/SubtitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_page_camp_informations"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/popup_child_close_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_close"
+            app:layout_constraintBottom_toBottomOf="@+id/popup_child_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/popup_child_title"
+            app:tint="@color/lighter_fir_green" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/popup_child_firstname_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="@id/popup_child_title"
+            app:layout_constraintTop_toBottomOf="@id/popup_child_title"
+            app:layout_constraintWidth_percent="0.485">
+
+            <EditText
+                android:id="@+id/popup_child_firstname"
+                style="@style/SubtitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:hint="@string/camp_page_child_firstname"
+                android:maxLength="15"
+                android:nextFocusLeft="@id/popup_child_name"
+                android:nextFocusRight="@id/popup_child_name"
+                android:nextFocusUp="@id/popup_child_name"
+                android:nextFocusDown="@id/popup_child_name"
+                android:nextFocusForward="@id/popup_child_name"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/popup_child_name_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/popup_child_title"
+            app:layout_constraintWidth_percent="0.485">
+
+            <EditText
+                android:id="@+id/popup_child_name"
+                style="@style/SubtitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:hint="@string/camp_page_child_name"
+                android:maxLength="15"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/popup_child_age_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="@id/popup_child_firstname_input_layout"
+            app:layout_constraintTop_toBottomOf="@id/popup_child_firstname_input_layout"
+            app:layout_constraintWidth_percent="0.485">
+
+            <EditText
+                android:id="@+id/popup_child_age"
+                style="@style/SubtitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:hint="@string/camp_page_child_age"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/popup_child_autonomy_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:endIconMode="dropdown_menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/popup_child_name_input_layout"
+            app:layout_constraintWidth_percent="0.485">
+
+            <AutoCompleteTextView
+                android:id="@+id/popup_child_autonomy"
+                style="@style/SubtitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:completionThreshold="0"
+                android:enabled="false"
+                android:hint="@string/camp_page_child_autonomy"
+                android:padding="17dp"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/popup_child_enuresis_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:endIconMode="dropdown_menu"
+            app:layout_constraintStart_toStartOf="@id/popup_child_age_input_layout"
+            app:layout_constraintTop_toBottomOf="@id/popup_child_age_input_layout"
+            app:layout_constraintWidth_percent="0.485">
+
+            <AutoCompleteTextView
+                android:id="@+id/popup_child_enuresis"
+                style="@style/SubtitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:completionThreshold="0"
+                android:enabled="false"
+                android:hint="@string/camp_page_child_enuresis"
+                android:padding="17dp"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/popup_child_encopresis_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:endIconMode="dropdown_menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/popup_child_autonomy_input_layout"
+            app:layout_constraintWidth_percent="0.485">
+
+            <AutoCompleteTextView
+                android:id="@+id/popup_child_encopresis"
+                style="@style/SubtitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="@color/white"
+                android:completionThreshold="0"
+                android:enabled="false"
+                android:hint="@string/camp_page_child_encopresis"
+                android:padding="17dp"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/popup_child_money_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:endIconMode="dropdown_menu"
+            app:layout_constraintStart_toStartOf="@id/popup_child_enuresis_input_layout"
+            app:layout_constraintTop_toBottomOf="@id/popup_child_enuresis_input_layout"
+            app:layout_constraintWidth_percent="0.485">
+
+            <AutoCompleteTextView
+                android:id="@+id/popup_child_money"
+                style="@style/SubtitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:completionThreshold="0"
+                android:enabled="false"
+                android:hint="@string/camp_page_child_money"
+                android:padding="17dp"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/popup_child_mail_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:endIconMode="dropdown_menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/popup_child_encopresis_input_layout"
+            app:layout_constraintWidth_percent="0.485">
+
+            <AutoCompleteTextView
+                android:id="@+id/popup_child_mail"
+                style="@style/SubtitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:completionThreshold="0"
+                android:enabled="false"
+                android:hint="@string/camp_page_child_mail"
+                android:padding="17dp"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/popup_child_medications_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="@id/popup_child_money_input_layout"
+            app:layout_constraintTop_toBottomOf="@id/popup_child_money_input_layout"
+            app:layout_constraintWidth_percent="0.485">
+
+            <EditText
+                android:id="@+id/popup_child_medications"
+                style="@style/SubtitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:hint="@string/camp_page_child_medications_name"
+                android:maxLength="40"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/popup_child_medications_hour_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:endIconMode="dropdown_menu"
+            app:layout_constraintStart_toStartOf="@id/popup_child_mail_input_layout"
+            app:layout_constraintTop_toBottomOf="@id/popup_child_mail_input_layout"
+            app:layout_constraintWidth_percent="0.36">
+
+            <AutoCompleteTextView
+                android:id="@+id/popup_child_medications_hour"
+                style="@style/SubtitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:completionThreshold="0"
+                android:enabled="false"
+                android:hint="@string/camp_page_child_medications_time"
+                android:padding="17dp"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ImageView
+            android:id="@+id/popup_child_medications_add_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="@id/popup_child_medications_hour_input_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/popup_child_medications_hour_input_layout"
+            app:layout_constraintTop_toTopOf="@id/popup_child_medications_hour_input_layout"
+            app:tint="@color/lighter_fir_green" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/popup_child_medications_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+            app:layout_constraintStart_toStartOf="@id/popup_child_medications_input_layout"
+            app:layout_constraintTop_toBottomOf="@+id/popup_child_medications_input_layout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/popup_child_diets_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="@id/popup_child_medications_recycler_view"
+            app:layout_constraintTop_toBottomOf="@id/popup_child_medications_recycler_view"
+            app:layout_constraintWidth_percent="0.87">
+
+            <EditText
+                android:id="@+id/popup_child_diets"
+                style="@style/SubtitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:hint="@string/camp_page_child_diet"
+                android:maxLength="40"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/popup_child_diets_add_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="@+id/popup_child_diets_input_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/popup_child_diets_input_layout"
+            app:layout_constraintTop_toTopOf="@+id/popup_child_diets_input_layout"
+            app:tint="@color/lighter_fir_green" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/popup_child_diets_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+            app:layout_constraintStart_toStartOf="@id/popup_child_diets_input_layout"
+            app:layout_constraintTop_toBottomOf="@id/popup_child_diets_input_layout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/popup_child_allergies_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="@id/popup_child_diets_recycler_view"
+            app:layout_constraintTop_toBottomOf="@id/popup_child_diets_recycler_view"
+            app:layout_constraintWidth_percent="0.87">
+
+            <EditText
+                android:id="@+id/popup_child_allergies"
+                style="@style/SubtitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:hint="@string/camp_page_child_allergies"
+                android:maxLength="40"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/popup_child_allergies_add_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="@+id/popup_child_allergies_input_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/popup_child_allergies_input_layout"
+            app:layout_constraintTop_toTopOf="@+id/popup_child_allergies_input_layout"
+            app:tint="@color/lighter_fir_green" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/popup_child_allergies_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+            app:layout_constraintStart_toStartOf="@id/popup_child_allergies_input_layout"
+            app:layout_constraintTop_toBottomOf="@id/popup_child_allergies_input_layout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/popup_child_phobias_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="@id/popup_child_allergies_recycler_view"
+            app:layout_constraintTop_toBottomOf="@id/popup_child_allergies_recycler_view"
+            app:layout_constraintWidth_percent="0.87">
+
+            <EditText
+                android:id="@+id/popup_child_phobias"
+                style="@style/SubtitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:hint="@string/camp_page_child_phobias"
+                android:maxLength="40"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/popup_child_phobias_add_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="@+id/popup_child_phobias_input_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/popup_child_phobias_input_layout"
+            app:layout_constraintTop_toTopOf="@+id/popup_child_phobias_input_layout"
+            app:tint="@color/lighter_fir_green" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/popup_child_phobias_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+            app:layout_constraintStart_toStartOf="@id/popup_child_phobias_input_layout"
+            app:layout_constraintTop_toBottomOf="@+id/popup_child_phobias_input_layout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/popup_child_notes_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="@id/popup_child_phobias_recycler_view"
+            app:layout_constraintTop_toBottomOf="@id/popup_child_phobias_recycler_view">
+
+            <EditText
+                android:id="@+id/popup_child_notes"
+                style="@style/SubtitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:hint="@string/camp_page_child_notes" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/popup_child_error"
+            style="@style/ErrorTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popup_child_notes_input_layout" />
+
+
+        <View
+            android:id="@+id/popup_camp_separator"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="@dimen/default_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popup_child_error" />
+
+        <ImageView
+            android:id="@+id/popup_child_save_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_save"
+            app:layout_constraintBottom_toBottomOf="@+id/popup_camp_separator"
+            app:layout_constraintEnd_toStartOf="@+id/popup_camp_separator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/popup_camp_separator"
+            app:tint="@color/lighter_fir_green" />
+
+        <ImageView
+            android:id="@+id/popup_child_delete_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintBottom_toBottomOf="@+id/popup_camp_separator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/popup_camp_separator"
+            app:layout_constraintTop_toTopOf="@+id/popup_camp_separator"
+            app:tint="@color/lighter_fir_green" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

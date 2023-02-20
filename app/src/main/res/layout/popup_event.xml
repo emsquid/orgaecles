@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/rounded_corner"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/popup_event_title"
+            style="@style/SubtitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/event_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/popup_event_close_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_close"
+            app:layout_constraintBottom_toBottomOf="@+id/popup_event_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/popup_event_title"
+            app:tint="@color/lighter_fir_green" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/popup_event_name_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="@id/popup_event_title"
+            app:layout_constraintTop_toBottomOf="@id/popup_event_title">
+
+            <EditText
+                android:id="@+id/popup_event_name"
+                style="@style/SubtitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:hint="@string/event_name"
+                android:maxLength="30"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/popup_event_start_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="@id/popup_event_name_input_layout"
+            app:layout_constraintTop_toBottomOf="@id/popup_event_name_input_layout"
+            app:layout_constraintWidth_percent="0.4">
+
+            <EditText
+                android:id="@+id/popup_event_start"
+                style="@style/SubtitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:hint="@string/event_start"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintBottom_toBottomOf="@+id/popup_event_end_input_layout"
+            app:layout_constraintEnd_toStartOf="@+id/popup_event_end_input_layout"
+            app:layout_constraintStart_toEndOf="@+id/popup_event_start_input_layout"
+            app:layout_constraintTop_toTopOf="@+id/popup_event_end_input_layout"
+            app:tint="@color/lighter_fir_green" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/popup_event_end_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="@id/popup_event_name_input_layout"
+            app:layout_constraintTop_toBottomOf="@id/popup_event_name_input_layout"
+            app:layout_constraintWidth_percent="0.4">
+
+            <EditText
+                android:id="@+id/popup_event_end"
+                style="@style/SubtitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:hint="@string/event_end"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/event_color_blue"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="@color/blue"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintStart_toStartOf="@+id/popup_event_start_input_layout"
+            app:layout_constraintTop_toBottomOf="@+id/popup_event_start_input_layout"
+            app:strokeColor="@color/selected_blue" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/event_color_green"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="@color/lighter_fir_green"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/popup_event_start_input_layout"
+            app:layout_constraintTop_toBottomOf="@+id/popup_event_start_input_layout"
+            app:strokeColor="@color/selected_blue" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/event_color_yellow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="@color/yellow"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintStart_toStartOf="@+id/popup_event_end_input_layout"
+            app:layout_constraintTop_toBottomOf="@+id/popup_event_end_input_layout"
+            app:strokeColor="@color/selected_blue" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/event_color_red"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="@color/red"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/popup_event_end_input_layout"
+            app:layout_constraintTop_toBottomOf="@+id/popup_event_end_input_layout"
+            app:strokeColor="@color/selected_blue" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/popup_event_description_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="@id/event_color_blue"
+            app:layout_constraintTop_toBottomOf="@id/event_color_blue">
+
+            <EditText
+                android:id="@+id/popup_event_description"
+                style="@style/SubtitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:hint="@string/event_description" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/popup_event_separator"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="@dimen/default_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popup_event_description_input_layout" />
+
+        <ImageView
+            android:id="@+id/popup_event_save_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_save"
+            app:layout_constraintBottom_toBottomOf="@+id/popup_event_separator"
+            app:layout_constraintEnd_toStartOf="@+id/popup_event_separator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/popup_event_separator"
+            app:tint="@color/lighter_fir_green" />
+
+        <ImageView
+            android:id="@+id/popup_event_delete_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintBottom_toBottomOf="@+id/popup_event_separator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/popup_event_separator"
+            app:layout_constraintTop_toTopOf="@+id/popup_event_separator"
+            app:tint="@color/lighter_fir_green" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

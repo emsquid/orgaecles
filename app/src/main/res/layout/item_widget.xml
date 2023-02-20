@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="5dp"
+    android:paddingTop="3dp"
+    android:background="@drawable/rounded_corner"
+    android:animateLayoutChanges="true">
+
+    <TextView
+        android:id="@+id/widget_name_textView"
+        style="@style/SmallTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Texte du widget"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/widget_remove_button"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:padding="5dp"
+        android:layout_marginLeft="2dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintBottom_toBottomOf="@+id/widget_name_textView"
+        app:layout_constraintStart_toEndOf="@+id/widget_name_textView"
+        app:layout_constraintTop_toTopOf="@+id/widget_name_textView"
+        app:tint="@color/grey" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

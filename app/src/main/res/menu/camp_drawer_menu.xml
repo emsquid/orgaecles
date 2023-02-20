@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/camp_menu_children_item"
+            android:icon="@drawable/ic_child"
+            android:title="@string/camp_menu_children" />
+
+        <item
+            android:id="@+id/camp_menu_tasks_item"
+            android:icon="@drawable/ic_task"
+            android:title="@string/camp_menu_tasks" />
+
+        <item
+            android:id="@+id/camp_menu_calendar_item"
+            android:icon="@drawable/ic_calendar"
+            android:title="@string/camp_menu_calendar" />
+
+        <item
+            android:id="@+id/camp_menu_typical_day_item"
+            android:icon="@drawable/ic_day"
+            android:title="@string/camp_menu_typical_day" />
+    </group>
+</menu>

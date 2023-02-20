@@ -1,0 +1,113 @@
+<resources>
+    <string name="app_name">OrgaEclès</string>
+
+    <!-- Page d'authentification-->
+    <string name="auth_page_title_login">Connexion</string>
+    <string name="auth_page_title_register">Inscription</string>
+    <string name="auth_page_name">Prénom</string>
+    <string name="auth_page_email">Email</string>
+    <string name="auth_page_password">Mot de passe</string>
+    <string name="auth_page_login">Se connecter</string>
+    <string name="auth_page_register">S\'inscrire</string>
+    <string name="auth_page_forgot_password">Mot de passe oublié</string>
+    <string name="auth_page_account">Déjà un compte ?</string>
+    <string name="auth_page_no_account">Pas de compte ?</string>
+    <string name="auth_page_reset_password">Réinitialiser</string>
+
+    <!-- menu main -->
+    <string name="main_menu_camps">Mes Colos</string>
+    <string name="main_menu_requests">Invitations</string>
+    <string name="main_menu_calendar">Mon Agenda</string>
+    <string name="main_menu_sign_out">Me déconnecter</string>
+    <string name="main_menu_open">Menu ouvert</string>
+    <string name="main_menu_close">Menu fermé</string>
+
+    <!-- Page des colos -->
+    <string name="home_page_title">Mes Colos</string>
+    <string name="home_page_camp_name">Nom de la colonie</string>
+    <string name="home_page_camp_start">Début</string>
+    <string name="home_page_camp_start_value">Date début</string>
+    <string name="home_page_camp_end">Fin</string>
+    <string name="home_page_camp_end_value">Date fin</string>
+    <string name="home_page_camp_creator_email">creator@gmail.com</string>
+    <string name="home_page_camp_animators">Email animateur</string>
+    <string name="home_page_camp_animators_value">example@gmail.com</string>
+    <string name="home_page_camp_informations">Informations</string>
+
+    <!-- Page de ma journée -->
+    <string name="day_page_title">Ma Journée</string>
+
+    <!-- menu main -->
+    <string name="camp_menu_children">Les Jeunes</string>
+    <string name="camp_menu_tasks">Les Tâches</string>
+    <string name="camp_menu_calendar">Agenda</string>
+    <string name="camp_menu_typical_day">Journée type</string>
+    <string name="camps_menu_quit">Quitter le camp</string>
+    <string name="camps_menu_open">Menu ouvert</string>
+    <string name="camps_menu_close">Menu fermé</string>
+
+    <!-- Page de la colo -->
+    <string name="camp_page_title">Nom de la colonie</string>
+    <string name="camp_page_category_calendar">Agenda</string>
+    <string name="camp_page_child_firstname">Prénom</string>
+    <string name="camp_page_child_name">Nom</string>
+    <string name="camp_page_child_age">Age</string>
+    <string name="camp_page_child_age_value">Age du jeune</string>
+    <string name="camp_page_child_autonomy">Autonomie</string>
+    <string-array name="camp_page_child_autonomy_values">
+        <item>Très Bon</item>
+        <item>Bon</item>
+        <item>Moyen</item>
+        <item>Faible</item>
+    </string-array>
+    <string name="camp_page_child_medications">Médicaments</string>
+    <string name="camp_page_child_medications_name">Médicament</string>
+    <string name="camp_page_child_medications_time">Heure</string>
+    <string-array name="camp_page_child_medications_time">
+        <item>Matin</item>
+        <item>Midi</item>
+        <item>Soir</item>
+        <item>Nuit</item>
+    </string-array>
+    <string name="camp_page_child_diet">Régime alimentaire</string>
+    <string name="camp_page_child_allergies">Allergies</string>
+    <string name="camp_page_child_phobias">Phobies</string>
+    <string name="camp_page_child_phobias_name">Phobie</string>
+    <string name="camp_page_child_enuresis">Enurésie</string>
+    <string-array name="camp_page_child_enuresis_values">
+        <item>Non</item>
+        <item>Oui</item>
+    </string-array>
+    <string name="camp_page_child_encopresis">Encoprésie</string>
+    <string-array name="camp_page_child_encopresis_values">
+        <item>Non</item>
+        <item>Oui</item>
+    </string-array>
+    <string name="camp_page_child_money">Gestion Argent</string>
+    <string-array name="camp_page_child_money_values">
+        <item>Non</item>
+        <item>Oui</item>
+    </string-array>
+    <string name="camp_page_child_mail">Courriel Autonome</string>
+    <string-array name="camp_page_child_mail_values">
+        <item>Non</item>
+        <item>Oui</item>
+    </string-array>
+    <string name="camp_page_child_notes">Notes</string>
+    <string name="camp_page_child_add">Ajouter</string>
+
+    <!-- Page des taches -->
+    <string name="task_name">Nom de la tâche</string>
+    <string name="task_animator">Animateur</string>
+
+    <!-- Agendas -->
+    <string name="calendar_day">Jour</string>
+    <string name="event_title">Evénement</string>
+    <string name="event_name">Nom de l\'événement</string>
+    <string name="event_description">Description</string>
+    <string name="event_start">Début</string>
+    <string name="event_end">Fin</string>
+
+
+
+</resources>

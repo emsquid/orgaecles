@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/user_calendar_previous"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_back_2"
+            app:layout_constraintBottom_toBottomOf="@+id/user_calendar_current_day"
+            app:layout_constraintEnd_toStartOf="@+id/user_calendar_current_day"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/user_calendar_current_day"
+            app:tint="@color/lighter_fir_green" />
+
+        <TextView
+            android:id="@+id/user_calendar_current_day"
+            style="@style/SubtitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:text="@string/calendar_day"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/user_calendar_next"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_next_2"
+            app:layout_constraintBottom_toBottomOf="@+id/user_calendar_current_day"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/user_calendar_current_day"
+            app:layout_constraintTop_toTopOf="@+id/user_calendar_current_day"
+            app:tint="@color/lighter_fir_green" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/user_calendar_current_day">
+
+            <fr.em.orgaecls.calendar.DayView
+                android:id="@+id/user_calendar_day_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                app:backgroundColor="@color/white" />
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/user_calendar_event_add_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:elevation="8dp"
+        app:backgroundTint="@color/lighter_fir_green"
+        app:maxImageSize="35dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlayExtended"
+        app:srcCompat="@drawable/ic_add"
+        app:tint="@color/white" />
+</RelativeLayout>
+

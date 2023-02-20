@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/main_menu_camps_item"
+            android:icon="@drawable/ic_tent"
+            android:title="@string/main_menu_camps" />
+
+        <item
+            android:id="@+id/main_menu_requests_item"
+            android:icon="@drawable/ic_request"
+            android:title="@string/main_menu_requests" />
+
+        <item
+            android:id="@+id/main_menu_day_item"
+            android:icon="@drawable/ic_calendar"
+            android:title="@string/main_menu_calendar" />
+    </group>
+</menu>
